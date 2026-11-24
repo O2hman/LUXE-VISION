@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUXE VISION – التواصل معنا</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2family=Tajawal:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="contact.html" class="logo">LUXE <span>VISION</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="services.html">الخدمات</a></li>
+        <li><a href="contact.html">التواصل</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="contact-card">
+          <h3><i class="fas fa-phone"></i> معلومات التواصل</h3>
+          <p><strong>الهاتف:</strong> 0557385861</p>
+          <p><strong>البريد الإلكتروني:</strong> othmanmhdi36@gmail.com</p>
+          <p><strong>العنوان:</strong> جدة، المملكة العربية السعودية</p>
+          <a href="https://wa.me/966557385861" class="whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i> بدء محادثة واتساب
+          </a>
+        </div>
+        <div class="contact-card">
+          <h3><i class="fas fa-map-marker"></i> العنوان</h3>
+          <p>جدة، المملكة العربية السعودية</p>
+          <p>نحن هنا لاستقبال زوارنا وتقديم الاستشارات البصرية</p>
+        </div>
+      </div>
+      
+      <form class="contact-form" action="#" method="POST">
+        <h2>إرسال رسالة</h2>
+        <div class="form-group">
+          <label for="name">الاسم</label>
+          <input type="text" id="name" name="name" placeholder="اسمك الكامل" required>
+        </div>
+        <div class="form-group">
+          <label for="email">البريد الإلكتروني</label>
+          <input type="email" id="email" name="email" placeholder="بريدك الإلكتروني" required>
+        </div>
+        <div class="form-group">
+          <label for="message">الرسالة</label>
+          <textarea id="message" name="message" placeholder="اكتب رسالتك هنا..." rows="4" required></textarea>
+        </div>
+        <button type="submit">إرسال الرسالة</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Social Links -->
+  <section style="padding: 80px 40px; background: var(--primary-black); text-align: center;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--gold-light); margin-bottom: 40px;">تابعنا على الشبكات الاجتماعية</h2>
+      <div class="social-links">
+        <a href="#" title="إنستغرام">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" title="تويتر">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" title="يوتيوب">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="contact.html" class="logo">LUXE <span>VISION</span></a>
+        <p>متجر فاخر للنظارات الطبية والشمسية والإكسسوارات، حيث نجمع بين الجودة العالمية والتصاميم العصرية لتلبية جميع احتياجاتك البصرية والأنيقة.</p>
+      </div>
+      <div class="footer-links">
+        <h3>القوائم</h3>
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="services.html">الخدمات</a></li>
+          <li><a href="contact.html">التواصل</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>تواصل معنا</h3>
+        <p><i class="fas fa-phone"></i> 0557385861</p>
+        <p><i class="fas fa-envelope"></i> othmanmhdi36@gmail.com</p>
+        <p><i class="fas fa-map-marker"></i> جدة، المملكة العربية السعودية</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 LUXE VISION - جميع الحقوق محفوظة</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    }
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+    
+    // WhatsApp link focus enhancement
+    document.querySelectorAll('.whatsapp').forEach(link => {
+      link.addEventListener('mouseover', function() {
+        this.style.transform = 'scale(1.1)';
+        this.style.transition = 'transform 0.3s ease';
+      });
+      link.addEventListener('mouseout', function() {
+        this.style.transform = 'scale(1)';
+      });
+    });
+  </script>
+</body>
+</html>
